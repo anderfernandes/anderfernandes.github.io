@@ -1,8 +1,3 @@
----
-title: Welcome to anderfernandes.com!
-layout: page
----
-
 ## Welcome!
 
 Welcome to my website! Here you will see some of the stuff I work on. It has changes a lot in the past few years. Right now I'm dedicated web development, specially React and Node, though I get to do some Cold Fusion sometimes too.
