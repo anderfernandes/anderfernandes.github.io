@@ -1,0 +1,37 @@
+<div class="ui borderless main large menu">
+    <div class="ui text container">
+      <a href="{{ "/" | relative_url }}" class="header item">
+        <!--<img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" style="margin-right:1.5em">-->
+        {{ site.title | escape }}
+      </a>
+
+      <a href="/" class="item">Home</a>
+      {% assign default_paths = site.pages | map: "path" %}
+      {% assign page_paths = site.header_pages | default: default_paths %}
+      {% for path in page_paths %}
+        {% assign my_page = site.pages | where: "path", path | first %}
+        {% if my_page.title %}
+        <a class="item" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+
+      <!--<a href="#" class="ui right floated dropdown item" tabindex="0">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item">Link Item</div>
+          <div class="item">Link Item</div>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <div class="item">Link Item</div>
+              <div class="item">Link Item</div>
+            </div>
+          </div>
+          <div class="item">Link Item</div>
+        </div>
+      </a>-->
+    </div>
+  </div>
