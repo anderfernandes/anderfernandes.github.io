@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 title: About
 excerpt: Who am I? Glad you asked!
-permalink: /about/
+permalink: /about
+icon: info circle
 ---
 
 My name is Anderson Fernandes and I love full stack web development. My fascination with programming started when I was 10 and saw my dad doing Delphi and something I believe was the predecessor to Microsoft's .NET framework.
