@@ -1,6 +1,7 @@
-<div class="ui fixed inverted huge menu">
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
   <div class="ui container">
-    <a href="#" class="header item">
+    <a href="{{ "/" | relative_url }}" class="header item">
       <!--<img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" style="margin-right:1.5em">-->
       {{ site.title | escape }}
     </a>
@@ -16,23 +17,34 @@
       </a>
       {% endif %}
     {% endfor %}
-    <!--<div class="ui simple dropdown item">
-      Dropdown <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item" href="#">Link Item</a>
-        <a class="item" href="#">Link Item</a>
-        <div class="divider"></div>
-        <div class="header">Header Item</div>
-        <div class="item">
-          <i class="dropdown icon"></i>
-          Sub Menu
-          <div class="menu">
-            <a class="item" href="#">Link Item</a>
-            <a class="item" href="#">Link Item</a>
-          </div>
-        </div>
-        <a class="item" href="#">Link Item</a>
+    <div class="right menu">
+      <div class="item">
+        <!--<a class="ui button">Log in</a>-->
       </div>
-    </div>-->
+      <div class="item">
+        <!--<a class="ui primary button">Sign Up</a>-->
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a href="{{ "/" | relative_url }}" class="header item">
+    <!--<img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" style="margin-right:1.5em">-->
+    {{ site.title | escape }}
+  </a>
+
+  <a href="/" class="{% if page.url == '/' %}active {% endif %} item"><i class="home icon"></i>Home</a>
+  {% assign default_paths = site.pages | map: "path" %}
+  {% assign page_paths = site.header_pages | default: default_paths %}
+  {% for path in page_paths %}
+    {% assign my_page = site.pages | where: "path", path | first %}
+    {% if my_page.title %}
+    <a class="{% if my_page.url == page.url %}active {% endif %} item" href="{{ my_page.url | relative_url }}">
+      <i class="{{ my_page.icon }} icon"></i>
+      {{ my_page.title | escape }}
+    </a>
+    {% endif %}
+  {% endfor %}
 </div>

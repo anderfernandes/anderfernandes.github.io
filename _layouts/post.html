@@ -3,16 +3,11 @@ layout: default
 ---
 <div class="ui main text container">
 
-  <h1 class="ui header">
+  <h1 class="ui header" style="padding-top: 2rem; padding-bottom: 2rem">
     {{ page.title }}
     <div class="sub header">{{ page.excerpt }}</div>
+    <div class="ui divider"></div>
   </h1>
-
-</div>
-
-{% include menu-pages.html %}
-
-<div class="ui main text container">
 
   <button class="ui facebook button">
     <i class="facebook icon"></i>
@@ -32,6 +27,14 @@ layout: default
   </button>
 
   <br /><br />
+
+</div>
+
+{% include menu-pages.html %}
+
+<div class="ui main text container">
+
+  <br />
 
   {{ content }}
 
