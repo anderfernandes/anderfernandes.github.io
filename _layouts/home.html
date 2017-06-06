@@ -8,9 +8,6 @@ layout: default
   <div class="ui inverted vertical masthead center aligned segment">
     <div class="ui container">
       <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
         <a href="{{ "/" | relative_url }}" class="header item">
           <!--<img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" style="margin-right:1.5em">-->
           {{ site.title | escape }}
@@ -28,10 +25,13 @@ layout: default
           </a>
           {% endif %}
         {% endfor %}
-        <div class="right item">
-          <!--<a class="ui inverted button">Log in</a>
-          <a class="ui inverted button">Sign Up</a>-->
-        </div>
+
+        <a class="toc right item">
+          <i class="sidebar icon"></i>
+        </a>
+        <!--<a class="ui inverted button">Log in</a>
+        <a class="ui inverted button">Sign Up</a>-->
+
       </div>
     </div>
     <div class="ui text container">
@@ -41,7 +41,6 @@ layout: default
       <h2>I'm Anderson Fernandes. In this website, you will see some of my work and hobbies. Enjoy!</h2>
       <a href="/blog" class="ui huge primary button"><i class="edit icon"></i> Blog</a>
       <a href="/about" class="ui huge primary button"><i class="info circle icon"></i> About</a>
-      <a href="/portfolio" class="ui huge primary button"><i class="picture icon"></i> Portfolio</a>
     </div>
   </div>
   <div class="ui vertical stripe segment">

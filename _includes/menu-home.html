@@ -18,18 +18,21 @@
       {% endif %}
     {% endfor %}
     <div class="right menu">
-      <div class="item">
-        <!--<a class="ui button">Log in</a>-->
+      <!--<div class="item">
+        <!--<a class="ui button">Log in</a>
       </div>
       <div class="item">
-        <!--<a class="ui primary button">Sign Up</a>-->
-      </div>
+        <a class="ui primary button">Sign Up</a>
+      </div>--->
+      <a class="toc right item">
+        <i class="sidebar icon"></i>
+      </a>
     </div>
   </div>
 </div>
 
 <!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
+<div class="ui right vertical inverted sidebar menu">
   <a href="{{ "/" | relative_url }}" class="header item">
     <!--<img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png" style="margin-right:1.5em">-->
     {{ site.title | escape }}

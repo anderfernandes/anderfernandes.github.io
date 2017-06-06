@@ -31,13 +31,26 @@
   $(document)
     .ready(function() {
 
+      // fix menu when passed
+     $('.secondary.pointing.menu')
+       .visibility({
+         once: false,
+         onBottomPassed: function() {
+           $('.fixed.menu').transition('fade in');
+         },
+         onBottomPassedReverse: function() {
+           $('.fixed.menu').transition('fade out');
+         }
+       });
+
       // fix main menu to page on passing
       $('.main.menu').visibility({
         type: 'fixed'
       });
+
       $('.overlay').visibility({
         type: 'fixed',
-        offset: 80
+        offset: 100
       });
 
       // lazy load images
