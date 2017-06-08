@@ -45,13 +45,16 @@
 
       // fix main menu to page on passing
       $('.main.menu').visibility({
-        type: 'fixed'
+        once: false,
+        onBottomPassed: function() {
+          $('.fixed.menu').transition('fade in');
+        },
+        onBottomPassedReverse: function() {
+          $('.fixed.menu').transition('fade out');
+        }
       });
 
-      $('.overlay').visibility({
-        type: 'fixed',
-        offset: 100
-      });
+
 
       // lazy load images
       $('.image').visibility({
