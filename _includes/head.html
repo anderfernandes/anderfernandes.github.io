@@ -5,20 +5,29 @@
 
   <title>{% if page.title %}{{ page.title | escape }} | Anderson Fernandes{% else %}Home | Anderson Fernandes{% endif %}</title>
 
+  <!-- Regular Meta -->
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <!-- Open Graph Metas -->
+  <meta property='og:image' content="{{ site.url }}{{ page.cover }}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | Astral | {{ site.current | escape }}{% else %}Docs | Astral{% endif %}" />
+  <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <!-- Twitter Metas -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@anderfernandes1">
+  <meta name="twitter:creator" content="@anderfernandes1">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} | Astral | {{ site.current | escape }}{% else %}Docs | Astral{% endif %}">
+  <meta name="twitter:description" content="{{ page.excerpt }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.cover }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
 
   <!-- Semantic Includes -->
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous">
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
 
 
 
@@ -31,8 +40,10 @@
   $(document)
     .ready(function() {
 
+      $('.ui.dropdown').dropdown();
+
       // fix menu when passed
-     $('.secondary.pointing.menu')
+     $('.ui.borderless.inverted.menu')
        .visibility({
          once: false,
          onBottomPassed: function() {
@@ -42,19 +53,6 @@
            $('.fixed.menu').transition('fade out');
          }
        });
-
-      // fix main menu to page on passing
-      $('.main.menu').visibility({
-        once: false,
-        onBottomPassed: function() {
-          $('.fixed.menu').transition('fade in');
-        },
-        onBottomPassedReverse: function() {
-          $('.fixed.menu').transition('fade out');
-        }
-      });
-
-
 
       // lazy load images
       $('.image').visibility({
@@ -69,9 +67,11 @@
       });
 
       // create sidebar and attach to menu open
-      $('.ui.sidebar')
+      $('.ui.inverted.sidebar')
         .sidebar('attach events', '.toc.item');
       });
+
+
   </script>
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">

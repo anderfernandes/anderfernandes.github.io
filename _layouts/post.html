@@ -9,41 +9,24 @@ layout: default
 {% include following-menu.html %}
 
 <div class="pusher">
-
-  <div class="ui main text container">
-
-    <h1 class="ui header" style="padding-top: 2rem; padding-bottom: 2rem">
-      {{ page.title }}
-      <div class="sub header">{{ page.excerpt }}</div>
-      <div class="ui divider"></div>
-    </h1>
-
-    <button class="ui facebook button">
-      <i class="facebook icon"></i>
-      Facebook
-    </button>
-    <button class="ui twitter button">
-      <i class="twitter icon"></i>
-      Twitter
-    </button>
-    <button class="ui google plus button">
-      <i class="google plus icon"></i>
-      Google Plus
-    </button>
-    <button class="ui linkedin button">
-      <i class="linkedin icon"></i>
-      LinkedIn
-    </button>
-
-    <br /><br />
-
-  </div>
-
   {% include menu-pages.html %}
-
-  <div class="ui main text container" style="padding: 3rem 0">
-
+  <div class="ui text container" style="padding-top:50px; padding-bottom:50px">
+    <h2 class="ui dividing header">
+      <i class="pencil icon"></i>
+      <div class="content">
+        {{ page.title }}
+        <div class="sub header">
+          <i class="user circle outline icon"></i>@anderfernandes | {{ page.date | date: "%A, %B %e, %Y at %r" }}
+        </div>
+        <div class="sub header">
+          {% for category in page.categories %}
+            {% if category != 'blog'  %}
+            <div class="ui label"><i class="tag icon"></i> {{ category }}</div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </h2>
     {{ content }}
-
   </div>
 </div>

@@ -2,4 +2,16 @@
 layout: default
 ---
 
-{{ content }}
+<!-- Sidebar Menu -->
+{% include sidebar-menu.html %}
+
+<!-- Following Menu -->
+{% include following-menu.html %}
+
+<div class="pusher">
+  {% include menu-pages.html %}
+  <div class="ui text container" style="padding-top:50px; padding-bottom:50px">
+    <h1 class="ui dividing header">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>

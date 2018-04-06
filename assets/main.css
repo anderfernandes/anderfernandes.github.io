@@ -1,9 +1,16 @@
+.ui.inverted.vertical.masthead.center.aligned.segment {
+top: 0px !important;
+left: 0px !important;
+background: linear-gradient(rgba(27,28,29,0.9), rgba(27,28,29,0.95)), url('/assets/code-1839406_1920.jpg');
+background-size: cover;
+}
+
 .hidden.menu {
   display: none;
 }
 
 .masthead.segment {
-  min-height: 700px;
+  min-height: 100vh;
   padding: 1em 0em;
 }
 .masthead .logo.item img {
@@ -51,8 +58,8 @@
   padding-bottom: 5em;
 }
 
-.footer.segment {
-  padding: 5em 0em;
+.borderless.main.menu {
+  border-radius: 0;
 }
 
 .secondary.pointing.menu .toc.item,
@@ -114,8 +121,8 @@
   }
 
   /* Hide menu items on mobile screen sizes */
-  .borderless.main.menu .item,
-  .borderless.main.menu .menu,
+  .large.inverted.menu .item,
+  .large.inverted.menu .menu,
   .top.fixed.menu .item,
   .top.fixed.menu .menu,
   .secondary.pointing.menu .item,
@@ -124,21 +131,30 @@
   }
 
   /* Show menu icon on mobile screen sizes */
-  .secondary.pointing.menu .toc.item,
+  .ui.inverted.menu .toc.item,
   .top.fixed.menu .toc.item,
-  .borderless.main.menu .toc.item {
+  .secondary.pointing.menu .toc.item, {
     display: block;
   }
 
   /* Show site name on menu at all times */
-  .borderless.main.menu .header.item,
+  .ui.inverted.menu .header.item,
   .top.fixed.menu .header.item,
   .secondary.pointing.menu .header.item {
     display: block;
   }
 
+  /* Show site name on menu at all times */
+  .ui.inverted.menu .right.item,
+  .top.fixed.menu .right.item,
+  .secondary.pointing.menu .right.item {
+    display: block;
+  }
+
+  .ui.vertical.menu { display: block; }
+
   .masthead.segment {
-    min-height: 350px;
+    min-height: 100vh;
   }
   .masthead h1.ui.header {
     font-size: 2em;

@@ -1,15 +1,13 @@
 ---
-layout: post
+layout: page
 title: Schedule
 excerpt: Here's where I'll be teaching
 permalink: /schedule
-icon: calendar
+icon: calendar alternate
 ---
 
-Web Design, App Inventor, Javascript, Java, Node, PHP - Clements Boys and Girls Club
-Middle School and High School
-Every Wednesday at 2:00 pm
+I have several classes coming up in the summer of 2018 at Central Texas College. The classes will all be for teens and young adults.
 
-App Inventor - Central Texas College, College For Kids (Continuing Education)
-Ages 10 through 14
-Week of June 19, 9:00 am
+Web Development will be open to the public.
+
+App Inventor will be an exclusive class for High School students in the Killeen/Fort Hood area. Stay tuned!

@@ -1,18 +1,37 @@
 ---
-layout: post
+layout: default
 ---
 
-<div class="ui main text container">
+<!-- Sidebar Menu -->
+{% include sidebar-menu.html %}
 
-  <div class="ui unstackable divided items">
+<!-- Following Menu -->
+{% include following-menu.html %}
+
+<div class="pusher">
+  {% include menu-pages.html %}
+  <div class="ui text container" style="padding-top:50px; padding-bottom:50px">
+    <h2 class="ui dividing header">
+      <i class="pencil icon"></i>
+      <div class="content">
+        Blog
+        <div class="sub header">
+          Find out what we've been up to!
+        </div>
+      </div>
+    </h2>
+    <div class="ui unstackable divided items">
     {% for post in site.posts %}
       <div class="item">
         <div class="ui small image">
-          <img src="https://semantic-ui.com/images/wireframe/image.png">
+          <img src="{{ post.cover }}">
         </div>
         <div class="middle aligned content">
-          <div class="header">
-            {{ post.title }}
+          <div class="ui header">
+            <div class="content">
+              {{ post.title }}
+              <div class="sub header"><i class="user circle icon"></i>@anderfernandes | {{ post.date | date: "%A, %B %e, %Y at %r" }}</div>
+            </div>
           </div>
           <div class="meta">
             {% for category in post.categories %}
@@ -25,13 +44,13 @@ layout: post
             <p>{{ post.excerpt }}</p>
           </div>
           <div class="extra">
-            <div class="ui right floated button">
-              Action
-            </div>
+            <a href="{{ post.url }}" class="ui right floated button">
+              Read More <i class="right chevron icon"></i>
+            </a>
           </div>
         </div>
       </div>
     {% endfor %}
+    </div>
   </div>
-
 </div>

@@ -1,15 +1,13 @@
 <div class="ui borderless large top fixed hidden menu">
   <div class="ui container">
+    <div href="{{ "/" | relative_url }}" class="header item">
+      <!--<img src="/assets/astral-logo-dark.png" style="margin-right:1rem; width:35px">-->
+      {{ site.title | escape }}
+    </div>
     {% include menu-loop.html %}
     <div class="right menu">
-      <!--<div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>--->
       <a class="toc right item">
-        <i class="sidebar icon"></i>
+        <i class="large sidebar icon"></i>
       </a>
     </div>
   </div>
