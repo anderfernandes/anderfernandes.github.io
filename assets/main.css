@@ -16,7 +16,7 @@ background-size: cover;
 .masthead .logo.item img {
   margin-right: 1em;
 }
-.masthead .ui.menu .ui.button {
+.masthead .ui.menu {
   margin-left: 0.5em;
 }
 .masthead h1.ui.header {

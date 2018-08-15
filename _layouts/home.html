@@ -20,11 +20,16 @@
               {{ site.title | escape }}
             </div>
             {% include menu-loop.html %}
-            <a class="toc right item">
-              <i class="sidebar icon"></i>
-            </a>
-            <!--<a class="ui inverted button">Log in</a>
-            <a class="ui inverted button">Sign Up</a>-->
+            <div class="right menu">
+              <a class="toc right item">
+                <i class="large sidebar icon"></i>
+              </a>
+              <div class="item">
+                <div class="ui basic inverted icon buttons">
+                    {% include social-buttons.html %}
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -35,7 +40,7 @@
           <h2>I'm Anderson Fernandes. In this website, you will see some of my work and hobbies. Enjoy!</h2>
           <a href="/blog" class="ui huge basic inverted button"><i class="edit icon"></i> Blog</a>
           <a href="/about" class="ui huge basic inverted button"><i class="info circle icon"></i> About</a>
-          <a href="https://www.paypal.me/anderfernandes" target="_blank" class="ui huge inverted active basic button"><i class="coffee icon"></i> Buy us cofeee!</a>
+          <a href="https://www.paypal.me/anderfernandes" target="_blank" class="ui huge inverted active basic button"><i class="coffee icon"></i> Buy me cofeee!</a>
         </div>
         <div class="ui center aligned container" style="margin-top: 25vh">
            &copy;  2017, 2018 @anderfernandes

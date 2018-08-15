@@ -16,8 +16,7 @@
 title: anderfernandes.com
 email: handerson171@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Creator of Astral. Web and Mobile Developer. Musican, teacher, gamer and
-  science enthusiast. I speak english, portuguese and spanish.
+  Creator of Astral. Software engineer, teacher, musican, science enthusiast. I speak english, portuguese and spanish.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://anderfernandes.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: anderfernandes1

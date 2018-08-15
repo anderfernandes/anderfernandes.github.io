@@ -1,7 +1,7 @@
-<div class="ui borderless main large inverted menu">
+<div class="ui borderless main inverted menu">
   <div class="ui container">
     <div href="{{ "/" | relative_url }}" class="header item">
-      <!--<img src="/assets/astral-logo-light.png" style="margin-right:1rem; width:35px">-->
+      <img src="https://avatars1.githubusercontent.com/u/4932608?s=460&v=4" class="ui avatar image">
       {{ site.title | escape }}
     </div>
     {% include menu-loop.html %}
@@ -9,6 +9,11 @@
       <a class="toc right item">
         <i class="large sidebar icon"></i>
       </a>
+      <div class="item">
+          <div class="ui basic inverted icon buttons">
+            {% include social-buttons.html %}
+          </div>
+        </div>
     </div>
   </div>
 </div>
